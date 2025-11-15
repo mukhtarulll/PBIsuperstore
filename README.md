@@ -37,21 +37,7 @@ Dashboard menampilkan:
 
 Dashboard menggunakan **star schema** sederhana untuk performa optimal dan maintainability:
 
-```
-         Calendar (Dimension)
-              |
-    [Date, Month, Year, Quarter, Weekday]
-              |
-              | (One-to-Many)
-              |
-         Orders (Fact)
-    [Sales, Profit, Quantity, Discount, 
-     Category, Region, Product, Customer]
-              |
-         _Measures (Aggregates)
-    [Total Sales, Total Profit, Margin %,
-     YOY Growth, Average Discount, dll]
-```
+![alt text](https://github.com/ilovetahugimbal/PBIsuperstore/blob/main/superstore_scheme%20model.png)
 
 **Relationship:**  
 Calendar[Date] → Orders[Order Date] (One-to-Many)
@@ -79,13 +65,13 @@ Menampilkan metrik ringkas:
 **Line Chart: Sales & Profit by Year**
 - Menunjukkan trajectory 2014–2017
 - Double axis untuk perbandingan sales dan profit
-- Insight: Sales naik konsisten tapi profit turun di 2017
+- Insight: Sales naik konsisten tapi sales turun di 2015 lalu naik kembali
 
 ### 3. Category & Regional Breakdown
 **Bar Charts:**
 - Profit by Category dan Product (top performers)
 - Sales by Region and City (market distribution)
-- Insight: Technology tertinggi margin, West tertinggi volume
+- Insight: Technology tertinggi margin, West tertinggi margin
 
 ### 4. Discount Impact Analysis
 **Clustered Column Chart: Profit & Sales by Discount Range**
@@ -105,33 +91,32 @@ Menampilkan metrik ringkas:
 ### 6. Interactivity
 - **Slicers**: Year, Region, Category untuk filtering multi-dimensi
 - **Cross-Filtering**: Klik bar chart otomatis update visual lain
-- **Drill-Down**: Year → Quarter → Month di trend chart
+- **Drill-Down**: Year - Quarter - Month - Day di trend chart
 
 ---
 
 ## Temuan Utama
 
-### 📉 Sales Turun 2.8% YOY di 2017
-- Tren positif 2014–2016 tiba-tiba melemah di 2017
-- Q2–Q3 2017 menunjukkan penurunan paling tajam
+### Sales Turun 2.8% YOY di 2015
+- Tren positif 2014–2016 tiba-tiba melemah di 2015
 - **Action**: Investigasi faktor eksternal (kompetitor, market saturation, pricing)
 
-### 💸 Diskon Tinggi ≠ Profit Tinggi
+### Diskon Tinggi ≠ Profit Tinggi
 - 23 produk dengan diskon >20% masih rugi
 - Diskon optimal tampak di range 1-10% (balance volume & margin)
 - **Action**: Review kebijakan diskon—cap maksimal 15% untuk produk low-margin
 
-### 🏆 Technology Adalah Star Category
+### Technology Adalah Star Category
 - Profit terbesar: $145K (30% total)
-- Margin tertinggi: 15.6%
+- Margin tertinggi: 17.4%
 - Rekomendasi: Prioritas stok, promosi, dan margin protection
 
-### 🔍 Central Region Efisiensi Terbaik
-- West tertinggi sales ($0.7M, 31% share) tapi margin lebih rendah
-- Central margin best-in-class, efisiensi operasional lebih baik
-- **Action**: Transfer best practices Central ke West
+### Central Region Efisiensi Terbaik
+- West tertinggi sales ($725k, 31% share) dan margin
+- Central margin rendah namun sales memumpuni, efisiensi operasional lebih baik
+- **Action**: Transfer best practices West ke Central
 
-### 📊 Q4 Seasonal Spike 40%
+### Q4 Seasonal Spike 40%
 - Pattern konsisten: Q4 (Oct–Dec) jauh lebih tinggi
 - Butuh inventory build-up Sep–Nov
 - Opportunity untuk margin management & flash sales
@@ -151,30 +136,11 @@ Menampilkan metrik ringkas:
 
 ---
 
-## File Dalam Repository
-
-```
-superstore-bi-dashboard/
-├── README.md                      # File ini (Bahasa Indonesia)
-├── README.en.md                   # English version
-├── BI-methodology.md              # Metodologi teknis (Indonesia)
-├── BI-methodology.en.md           # Technical methodology (English)
-├── superstore_dashboard.pbix      # File Power BI (main deliverable)
-├── superstore_data.csv            # Raw dataset dari Kaggle
-├── queries.sql                    # Sample SQL queries untuk validation
-├── portfolio-insights.pdf         # Export dashboard sebagai PDF
-├── screenshot-dashboard.png       # Screenshot full dashboard
-├── screenshot-model.png           # Screenshot data model schema
-└── CHANGELOG.md                   # Version history (optional)
-```
-
----
-
 ## Cara Menggunakan
 
 ### 1. Preview Dashboard
-- Buka file `portfolio-insights.pdf` untuk melihat dashboard versi static
-- Lihat screenshot `screenshot-dashboard.png` dan `screenshot-model.png` untuk gambaran cepat
+- Buka file `superstore_dashboard.pdf` untuk melihat dashboard versi static
+- Lihat screenshot `superstore_dashboard.png` dan `superstore_scheme model.png` untuk gambaran cepat
 
 ### 2. Explore Interaktif (Offline)
 - Download `superstore_dashboard.pbix`
@@ -197,7 +163,7 @@ superstore-bi-dashboard/
 
 **Untuk Preview/Baca:**
 - Browser (baca markdown & PDF)
-- PDF reader (untuk `portfolio-insights.pdf`)
+- PDF reader (untuk `superstore_dashboard.pdf`)
 
 **Untuk Explore Interaktif:**
 - Power BI Desktop (gratis, unduh dari https://powerbi.microsoft.com/downloads)
@@ -205,27 +171,8 @@ superstore-bi-dashboard/
 
 **Untuk Validasi Data:**
 - SQL client (SQLite, DBeaver, pgAdmin, atau lainnya)
-- Import `superstore_data.csv` ke database
+- Import `Sample - Superstore.csv` ke database
 - Run query dari `queries.sql`
-
----
-
-## Insight & Rekomendasi Bisnis
-
-### Quick Wins (1–2 Minggu)
-1. Audit bottom 10 produk by profit → discontinue atau reprice
-2. Cap diskon maksimal 15% untuk produk low-margin (<5% margin)
-3. Investigasi penyebab sales decline Q2–Q3 2017
-
-### Medium Term (1–3 Bulan)
-4. Implementasi dynamic pricing: tinggi margin saat Q4, turun saat off-season
-5. Transfer operational best practices Central region ke West region
-6. Increase inventory allocation untuk Technology category
-
-### Long Term (3–6 Bulan)
-7. Build forecasting model untuk demand planning Q4
-8. Setup automated dashboard refresh (Power BI Service)
-9. Expand analysis ke customer lifetime value (CLV) dan retention cohorts
 
 ---
 
@@ -236,20 +183,4 @@ Dashboard dibangun mengikuti best practice BI/DA:
 - **DAX Best Practices**: Measures terpisah dari dimension, CALCULATE untuk context override
 - **Documentation**: Setiap step terdokumentasi untuk reproducibility
 - **Data Validation**: Cross-checked dengan SQL untuk accuracy
-
-Lihat file `BI-methodology.md` untuk detail lengkap setiap tahapan.
-
----
-
-## Skills Demonstrated
-
-Dashboard ini melatih & menunjukkan kemampuan:
-- **Data Modeling**: Star schema, relationships, calculated columns
-- **ETL & Cleaning**: Power Query, data type conversion, handling edge cases
-- **DAX/Analytics**: Time intelligence, measures, conditional logic
-- **Visualization**: Chart selection, interactivity, color scheme consistency
-- **Business Acumen**: KPI definition, insight generation, actionable recommendations
-- **Documentation**: README, methodology, SQL validation queries
-**Last Updated:** November 2025  
-**Status:** Portfolio Ready  
-**Version:** 1.0
+- Lihat file `BI-methodology.md` untuk detail lengkap setiap tahapan.
