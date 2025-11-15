@@ -186,9 +186,3 @@ Dashboard built following BI/DA best practices:
 - **Documentation**: Every step documented for reproducibility
 - **Data Validation**: Cross-checked with SQL for accuracy
 - See `BI-methodology.en.md` for detailed explanation of each stage
-
----
-
-**Last Updated:** November 2025  
-**Status:** Portfolio Ready  
-**Version:** 1.0
