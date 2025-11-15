@@ -146,9 +146,9 @@ Dashboard satu halaman dengan komponen:
 
 ### 7. Penarikan Insight dan Dokumentasi
 **Insight Utama:**
-- Sales turun 2.8% YOY di 2017, terutama di Q2–Q3
+- Sales turun 2.8% YOY di 2015
 - 23 produk dengan diskon >20% masih mengalami kerugian
-- Technology adalah kategori dengan margin tertinggi (15.6%)
+- Technology adalah kategori dengan margin tertinggi (17.4%)
 - Central region memiliki efisiensi margin terbaik meski volume tertinggi dari West
 - Pola seasonality menunjukkan Q4 konsisten 40% lebih tinggi dari rata-rata
 
