@@ -146,9 +146,9 @@ Single-page dashboard with the following components:
 
 ### 7. Insight Generation and Documentation
 **Key Insights:**
-- Sales declined 2.8% YOY in 2017, primarily in Q2–Q3
+- Sales declined 2.8% YOY in 2015
 - 23 products with discounts >20% still experience losses
-- Technology is the category with the highest margin (15.6%)
+- Technology is the category with the highest margin (17.4%)
 - Central region has the best margin efficiency despite West having the highest volume
 - Seasonality pattern shows Q4 consistently 40% higher than average
 
