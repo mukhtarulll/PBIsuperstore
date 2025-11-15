@@ -1,3 +1,5 @@
+[![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/ilovetahugimbal/PBIsuperstore/README.en.md)
+
 # Retail Superstore BI Dashboard
 
 ## Project Overview
