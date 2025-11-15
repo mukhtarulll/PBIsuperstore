@@ -1,4 +1,4 @@
-[![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/ilovetahugimbal/PBIsuperstore/README.en.md)
+[![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/ilovetahugimbal/PBIsuperstore/blob/main/README.en.md)
 
 # Retail Superstore BI Dashboard
 
