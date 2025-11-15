@@ -9,7 +9,7 @@ This project is an interactive Business Intelligence dashboard that analyzes Sup
 
 ## Quick Summary
 
-![alt text](https://github.com/ilovetahugimbal/PBIsuperstore/blob/readme-baru/superstore_dashboard.png)
+![alt text](https://github.com/ilovetahugimbal/PBIsuperstore/blob/main/superstore_dashboard.png)
 
 Dashboard includes:
 - **Executive KPI**: Total sales ($2.3M), profit ($286K), margin (12.5%), YOY growth trends
