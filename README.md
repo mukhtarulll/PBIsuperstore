@@ -1,4 +1,4 @@
-[![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/ilovetahugimbal/PBIsuperstore/blob/main/README.en.md)
+[![en](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/mukhtarulll/PBIsuperstore/blob/main/README.en.md)
 
 # Retail Superstore BI Dashboard
 ## Portfolio Project: Business Intelligence & Analytics
@@ -9,7 +9,7 @@ Proyek ini adalah dashboard Business Intelligence interaktif yang menganalisis d
 
 ## Ringkasan Singkat
 
-![alt text](https://github.com/ilovetahugimbal/PBIsuperstore/blob/main/superstore_dashboard.png)
+![Dashboard](superstore_dashboard.png)
 
 Dashboard menampilkan:
 - **Executive KPI**: Total sales ($2.3M), profit ($286K), margin (12.5%), YOY growth trends
@@ -39,7 +39,7 @@ Dashboard menampilkan:
 
 Dashboard menggunakan **star schema** sederhana untuk performa optimal dan maintainability:
 
-![alt text](https://github.com/ilovetahugimbal/PBIsuperstore/blob/main/superstore_scheme%20model.png)
+![Model](superstore_scheme%20model.png)
 
 **Relationship:**  
 Calendar[Date] → Orders[Order Date] (One-to-Many)
